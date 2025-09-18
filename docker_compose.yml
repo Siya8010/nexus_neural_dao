@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  finance-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - DEBUG=true
+    volumes:
+      - ./data:/app/data
+      - ./app:/app/app
+    restart: unless-stopped

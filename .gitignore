@@ -1,0 +1,33 @@
+# Secrets and env
+.env
+.python-version
+
+# Python/build artifacts
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+.venv/
+
+# OS/editor files
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Node/build
+node_modules/
+.parcel-cache/
+.next/
+.nuxt/
+out/
+coverage/

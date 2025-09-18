@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Strategic Finance | AI-Powered Financial Modeling</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <i class="fas fa-chart-network"></i>
+                    <span>Autonomous Finance</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#demo">Demo</a>
+                    <a href="#about">About</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transform Financial Planning with AI</h1>
+                    <p class="hero-description">
+                        Convert natural language into comprehensive financial models and Excel forecasts instantly. 
+                        Powered by advanced AI and machine learning.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Time Saved</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Excel Compatible</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">24/7</span>
+                            <span class="stat-label">AI Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card">
+                        <div class="visual-header">
+                            <i class="fas fa-brain"></i>
+                            <h3>AI Financial Assistant</h3>
+                        </div>
+                        <div class="visual-content">
+                            <p>Describe your financial scenario in plain English</p>
+                            <div class="input-group">
+                                <textarea 
+                                    id="queryInput" 
+                                    placeholder="Example: Create 12-month revenue forecast with 2 sales people and $200k marketing budget"
+                                    rows="3"
+                                ></textarea>
+                                <button id="generateBtn" class="btn-primary">
+                                    <i class="fas fa-bolt"></i> Generate Model
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Powerful Financial Intelligence</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Natural Language Processing</h3>
+                    <p>Describe complex financial scenarios in plain English and get instant structured models.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3>Excel Integration</h3>
+                    <p>Export directly to Excel with professional formatting and formulas ready for analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI-Powered Insights</h3>
+                    <p>Leverage advanced AI to generate accurate financial projections and scenarios.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Real-time Analytics</h3>
+                    <p>Visualize financial data with interactive charts and comprehensive dashboards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo-section">
+        <div class="container">
+            <h2>Experience the Power of AI Finance</h2>
+            <p class="section-subtitle">Try these example scenarios or create your own</p>
+            
+            <div class="templates-grid">
+                <div class="template-card" data-query="Create 12-month revenue forecast with 2 sales people">
+                    <div class="template-header">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Basic Forecast</h4>
+                    </div>
+                    <p>Standard revenue projection with sales team growth</p>
+                    <button class="btn-outline template-btn">Use Template</button>
+                </div>
+                
+                <div class="template-card" data-query="Model aggressive growth with 5 sales people by month 6 and $500k marketing budget">
+                    <div class="template-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Growth Scenario</h4>
+                    </div>
+                    <p>High-growth model with expanded marketing and sales</p>
+                    <button class="btn-outline template-btn">Use Template</button>
+                </div>
+                
+                <div class="template-card" data-query="Compare revenue if we focus only on large customers vs mixed approach">
+                    <div class="template-header">
+                        <i class="fas fa-balance-scale"></i>
+                        <h4>What-If Analysis</h4>
+                    </div>
+                    <p>Compare different business strategy scenarios</p>
+                    <button class="btn-outline template-btn">Use Template</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section hidden" id="resultsSection">
+        <div class="container">
+            <div class="results-header">
+                <h2><i class="fas fa-check-circle"></i> Financial Model Generated</h2>
+                <div class="action-buttons">
+                    <button id="exportExcelBtn" class="btn-primary">
+                        <i class="fas fa-download"></i> Export to Excel
+                    </button>
+                    <button id="newQueryBtn" class="btn-outline">
+                        <i class="fas fa-plus"></i> New Analysis
+                    </button>
+                </div>
+            </div>
+
+            <div class="model-summary">
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h4>Model ID</h4>
+                        <p id="modelId">-</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h4>Time Horizon</h4>
+                        <p id="timeHorizon">- months</p>
+                    </div>
+                </div>
+                <div class="summary-card">
+                    <div class="summary-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="summary-content">
+                        <h4>Total Revenue</h4>
+                        <p id="totalRevenue">$-</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="projections">
+                        <i class="fas fa-table"></i> Monthly Projections
+                    </button>
+                    <button class="tab-btn" data-tab="drivers">
+                        <i class="fas fa-sliders-h"></i> Revenue Drivers
+                    </button>
+                    <button class="tab-btn" data-tab="assumptions">
+                        <i class="fas fa-info-circle"></i> Assumptions
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="projectionsTab" class="tab-pane active">
+                        <div class="table-container">
+                            <table id="projectionsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Sales Team</th>
+                                        <th>Large Customers</th>
+                                        <th>Small Customers</th>
+                                        <th>Large Revenue</th>
+                                        <th>Small Revenue</th>
+                                        <th>Total Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="driversTab" class="tab-pane">
+                        <div class="cards-grid" id="driversContainer"></div>
+                    </div>
+
+                    <div id="assumptionsTab" class="tab-pane">
+                        <div class="cards-grid" id="assumptionsContainer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading State -->
+    <div class="loading-overlay hidden" id="loadingIndicator">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3>Generating Your Financial Model</h3>
+            <p>Our AI is analyzing your scenario and creating comprehensive projections...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-chart-network"></i>
+                    <span>Autonomous Strategic Finance</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Autonomous Strategic Finance. Powered by AI and machine learning.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/scripts/app.js"></script>
+</body>
+</html>

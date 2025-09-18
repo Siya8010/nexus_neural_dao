@@ -1,0 +1,57 @@
+/* IBM-inspired layer: IBM Plex + Carbon tokens overrides */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://unpkg.com/carbon-components/css/carbon-components.min.css');
+
+:root {
+  /* IBM Carbon-inspired palette */
+  --primary: #0f62fe;        /* Blue 60 */
+  --primary-dark: #0043ce;   /* Blue 70 */
+  --secondary: #525252;      /* Gray 70 */
+  --accent: #08bdba;         /* Teal 40 */
+  --success: #24a148;        /* Green 50 */
+  --warning: #f1c21b;        /* Yellow 30 */
+  --error: #da1e28;          /* Red 60 */
+  --light: #f4f4f4;          /* Gray 10 */
+  --dark: #161616;           /* Gray 100 */
+  --gray-100: #f4f4f4;
+  --gray-200: #e0e0e0;
+  --gray-300: #c6c6c6;
+  --gray-600: #6f6f6f;
+  --gray-800: #393939;
+}
+
+body {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--dark);
+}
+
+/* Buttons (align to Carbon feel using tokens) */
+.btn-primary {
+  background: var(--primary);
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+.btn-outline {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline:hover {
+  background: rgba(15, 98, 254, 0.06);
+}
+
+/* Cards and surfaces */
+.visual-card, .feature-card, .template-card, .summary-card, .driver-card, .assumption-card {
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+}
+
+/* Charts sizing */
+#chartsTab .visual-card {
+  min-height: 280px;
+}
+#chartsTab canvas {
+  width: 100% !important;
+  height: 220px !important;
+}
